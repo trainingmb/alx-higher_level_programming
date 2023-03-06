@@ -1,4 +1,2 @@
 #!/bin/bash
-python3
-echo $PYCODE
-echo 'exit()'
+echo $PYCODE | python3
