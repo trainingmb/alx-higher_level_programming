@@ -3,4 +3,4 @@
 
 def print_list_integer(my_list=[]):
     for i in mylist:
-        print(i)
+        print("{}".format(i))
