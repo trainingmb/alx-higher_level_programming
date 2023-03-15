@@ -5,9 +5,6 @@ def roman_to_int(roman_string):
     if type(roman_string) != type("") or roman_string is None:
         return 0
     rms = {'M':1000, 'D':500, 'C':100, 'L':50, 'X':10, 'V':5, 'I':1}
-    for i in roman_string:
-        if i not in ['M', 'D', 'C', 'L', 'X', 'V', 'I']:
-            return 0
     value = 0
     values = list(map(lambda x: rms[x], roman_string))
     l = len(values)
