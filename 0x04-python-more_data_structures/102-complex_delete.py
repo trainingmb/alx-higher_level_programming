@@ -6,6 +6,5 @@ def complex_delete(a_dictionary, value):
         if a_dictionary[i] == value:
             rms.append(i)
     for i in rms:
-        a_dictionary.pop(i,0)
-    return a_dictionary
-
+        del a_dictionary[i]
+    return(a_dictionary)
