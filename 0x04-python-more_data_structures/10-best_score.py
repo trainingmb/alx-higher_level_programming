@@ -2,6 +2,8 @@
 
 
 def best_score(a_dictionary):
+    if type(a_dictionary) != type({}):
+        return None
     kys = list(a_dictionary.keys())
     if len(kys) < 1:
         return None
