@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
-
-def uniq_add(my_list=[]):
-    return sum(set(my_list))
+def safe_print_division(a, b):
+    c = 0
+    i = 0
+    try:
+        c = a / b
+    except:
+        c = None
+    finally:
+        print("Inside result: {}".format(c))
+        return c
