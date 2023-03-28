@@ -3,5 +3,5 @@
 """Define a class Square."""
 
 class Square:
-	"""Represent a square."""
+	"""Representation of a square."""
 	pass
