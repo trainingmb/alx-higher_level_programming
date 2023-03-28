@@ -13,7 +13,7 @@ class Square:
         Args:
             size (int): Size of the square
         """
-        self.size(size)
+        self.size = size
 
     def area(self):
         """
@@ -22,12 +22,14 @@ class Square:
         """
         return (self.__size * self.__size)
 
+    @property
     def size(self):
         """
         Size getter
         """
         return (self.__size)
 
+    @size.setter
     def size(self, value):
         """
         Size getter
