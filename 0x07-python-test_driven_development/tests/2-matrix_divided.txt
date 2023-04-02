@@ -1,0 +1,103 @@
+
+===========================
+How to Use 2-matrix_divided.py
+===========================
+
+Performs a division of a matrix by a divisor "matrix_divided(matrix, div)"
+
+Usage
+=====
+
+Matrix and Valid Divisor
+========================
+
+	"matrix_divided(matrix, div)" Standard usage is a list of lists of integers
+	or floats divided by the divisor to provide a new matrix
+
+::
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> mat = [[1, 232.2, 3], [4, 32.5, 632.23]]
+	>>> print(matrix_divided(mat, 3))
+	[[0.33, 77.4, 1.0], [1.33, 10.83, 210.74]]
+	>>> print(mat)
+	[[1, 232.2, 3], [4, 32.5, 632.23]]
+
+
+Also handles negative values
+
+::
+	>>> mat = [[-1.83298, 2.23872, -3.2938], [4.23874, -5.232, 6.32]]
+	>>> print(matrix_divided(mat, 3))
+	[[-0.61, 0.75, -1.1], [1.41, -1.74, 2.11]]
+	>>> print(mat)
+	[[-1.83298, 2.23872, -3.2938], [4.23874, -5.232, 6.32]]
+
+Matrix Exceptions
+=================
+
+Matrix passed is not a list
+
+::
+	>>> print(matrix_divided('Error', 3))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix passed is not a list of lists
+
+::
+	>>> print(matrix_divided(['Error'], 3))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix is not a list of lists of integers or floats
+
+::
+
+	>>> mat = [[1, 2, 3],['a', 'b', 'expected'], [4, 5, 6]]
+	>>> print(matrix_divided(mat, 3))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Matrix rows are not of equal len
+
+::
+
+	>>> mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]]
+	>>> print(matrix_divided(mat, 3))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: Each row of the matrix must have the same size
+
+Matrix is of length 0
+
+::
+
+	>>> print(matrix_divided([], 3))
+	[]
+
+Div Exceptions
+==============
+
+Div is not an integer or float
+
+::
+
+	>>> mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+	>>> print(matrix_divided(mat, "Not Number"))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: div must be a number
+
+Div is equal to zero
+
+::
+
+	>>> mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+	>>> print(matrix_divided(mat, 0))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	ZeroDivisionError: division by zero
