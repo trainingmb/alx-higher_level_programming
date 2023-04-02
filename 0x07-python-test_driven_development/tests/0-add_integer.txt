@@ -27,7 +27,7 @@ Also handles negatice numbers
 ::
 
 	>>> add_integer(-9, -29)
-	-20
+	-38
 
 
 Floating point arguments are typecast into integers before adding
@@ -70,7 +70,7 @@ The function cannot handle inf as an argument
 
 ::
 
-    >>>  add_integer(float('inf'))
+    >>> add_integer(float('inf'))
     Traceback (most recent call last):
     OverflowError: cannot convert float infinity to integer
      
@@ -80,6 +80,6 @@ The function cannot handle Nan Numbers as an argument
 
 ::
 
-    >>>  add_integer(float('nan'))
+    >>> add_integer(float('nan'))
     Traceback (most recent call last):
     ValueError: cannot convert float NaN to integer
