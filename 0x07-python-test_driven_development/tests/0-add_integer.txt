@@ -15,7 +15,7 @@ Number Arguments
 
 ::
 
-	>>>add_integer = __import__('.0-add_integer').add_integer
+	>>>add_integer = __import__('0-add_integer').add_integer
 	>>>add_integer(22)
 	120
 	>>>add_integer(700, 22)
