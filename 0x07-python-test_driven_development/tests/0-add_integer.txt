@@ -11,7 +11,7 @@ Usage
 Number Arguments
 ================
 
-	"add_integer(...)"  Standard usage is equivalent to the '='+  operator
+	"add_integer(...)"  Standard usage is equivalent to the '+'  operator
 
 ::
 
@@ -22,7 +22,7 @@ Number Arguments
 	722
 
 
-Also handles negatice numbers
+Also handles negative numbers
 
 ::
 
