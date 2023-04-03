@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Rectangle class.
+"""
+
 
 class Rectangle:
     """
@@ -18,6 +22,7 @@ class Rectangle:
         """
         self.width  = width
         self.height = height
+    
     @classmethod
     def checkint(var, name):
         """
@@ -31,12 +36,14 @@ class Rectangle:
             raise TypeError("{} must be an integer".format(name))
         if var < 0:
             raise ValueError("{} must be >= 0".format(name))
+    
     @property
     def width(self):
         """
         Getter for width
         """
         return self.__width
+    
     @width.setter
     def width(nwidth):
         """
@@ -47,12 +54,14 @@ class Rectangle:
         """
         Rectangle.checkint(nwidth, "width")
         self.__width = nwidth
+    
     @property
     def height(self):
         """
         Getter for height
         """
         return self.__height
+    
     @height.setter
     def height(nheight):
         """
