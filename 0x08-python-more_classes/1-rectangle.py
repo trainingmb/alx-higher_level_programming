@@ -9,8 +9,6 @@ class Rectangle:
     Defines a class that defines a rectangle
 
     """
-    self.__width = 0
-    self.__height = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -23,20 +21,6 @@ class Rectangle:
         self.width  = width
         self.height = height
     
-    @classmethod
-    def checkint(var, name):
-        """
-        Check if var is an integer and >= 0
-
-        Args:
-            var  (int): The integer to check
-            name (str): Name to place in exception
-        """
-        if not isinstance(var, int):
-            raise TypeError("{} must be an integer".format(name))
-        if var < 0:
-            raise ValueError("{} must be >= 0".format(name))
-    
     @property
     def width(self):
         """
@@ -45,14 +29,17 @@ class Rectangle:
         return self.__width
     
     @width.setter
-    def width(nwidth):
+    def width(self, nwidth):
         """
         Setter for the width
 
         Args:
             nwidth (int): The new width to set as width
         """
-        Rectangle.checkint(nwidth, "width")
+        if not isinstance(nwidth, int):
+            raise TypeError("{} must be an integer".format("width"))
+        if nwidth < 0:
+            raise ValueError("{} must be >= 0".format("width"))
         self.__width = nwidth
     
     @property
@@ -63,12 +50,15 @@ class Rectangle:
         return self.__height
     
     @height.setter
-    def height(nheight):
+    def height(self, nheight):
         """
         Setter for the height
 
         Args:
             height (int): The new height to set as height
         """
-        Rectangle.checkint(nheight, "height")
+        if not isinstance(nheight, int):
+            raise TypeError("{} must be an integer".format("height"))
+        if nheight < 0:
+            raise ValueError("{} must be >= 0".format("height"))
         self.__height = nheight
