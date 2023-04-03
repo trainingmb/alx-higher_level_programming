@@ -73,4 +73,6 @@ class Rectangle:
         """
         Calculate and returns the perimeter of the rectangle
         """
+        if self.height == 0 or self.width == 0:
+            return (0)
         return (self.height+self.width)
