@@ -20,5 +20,3 @@ def say_my_name(first_name, last_name=""):
     if not isinstance(last_name, str):
         raise TypeError(err2)
     print(say_it.format(first_name, last_name))
-
-    
