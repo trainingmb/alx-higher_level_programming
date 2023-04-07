@@ -7,12 +7,10 @@ def matrix_divided(matrix, div):
     """
     Divides all values of a matrix [matrix] by the value [div]
     to 2 decimal places
-
     Args:
         matrix (list of lists): A matrix expresed as a list of
         lists of integers or floats
         div (int, float): The divisor
-
     Return:
     A matrix holding the result of the division
     """
