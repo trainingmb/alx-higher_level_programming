@@ -14,11 +14,13 @@ Two names provided
 
 ::
 
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
 	>>> say_my_name("Alex", "Jonnes")
-
+	My name is Alex Jonnes
 	>>> say_my_name("", "Bond")
-
-	>>> say_my_name("James", "Jonnes")
+	My name is  Bond
+	>>> say_my_name("James", "Bond")
+	My name is James Bond
 
 
 
@@ -40,7 +42,14 @@ Exceptions
 ::
 
 	>>> say_my_name(55, "Jonnes")
-
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: first_name must be a string
 	>>> say_my_name("Alex", 43)
-
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: last_name must be a string
 	>>> say_my_name(('Tuple', ))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: first_name must be a string
