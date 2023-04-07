@@ -3,6 +3,7 @@
 Matrix divided
 """
 
+
 def matrix_divided(matrix, div):
     """
     Divides all values of a matrix [matrix] by the value [div]
