@@ -1,0 +1,8 @@
+===========================
+How to Use 3_say_my_name.py
+===========================
+
+A function that prints My name is <first name> <last name>
+
+Usage
+=====
