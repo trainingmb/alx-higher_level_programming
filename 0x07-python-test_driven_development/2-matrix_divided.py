@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+Matrix divided
+"""
 
 def matrix_divided(matrix, div):
     """
@@ -9,7 +11,7 @@ def matrix_divided(matrix, div):
     Args:
         matrix (list of lists): A matrix expresed as a list of
         lists of integers or floats
-        div (int, float): The divisor 
+        div (int, float): The divisor
 
     Return:
     A matrix holding the result of the division
