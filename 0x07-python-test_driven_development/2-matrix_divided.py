@@ -15,7 +15,6 @@ def matrix_divided(matrix, div):
 
     Return:
     A matrix holding the result of the division
-
     """
     err1 = "matrix must be a matrix (list of lists) of integers/floats"
     err2 = "Each row of the matrix must have the same size"
