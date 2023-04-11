@@ -1,0 +1,23 @@
+
+===========================
+How to Use 1-my_list.py
+===========================
+
+A class of MyList
+
+Usage
+=====
+
+MyList testing Printed
+======================
+
+	"MyList.print_sorted()"  
+
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> from random import random as r
+	>>> l = MyList()
+	>>> [ l.append(r()) for i in range(100)]
+	>>> l.print_sorted() == list(l).sorted()
+	True
