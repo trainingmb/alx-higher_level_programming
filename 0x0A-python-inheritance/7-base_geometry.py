@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-bASEgEOMETRY Module
+BaseGeometry Module
 """
 
 
