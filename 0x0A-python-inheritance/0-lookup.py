@@ -3,6 +3,7 @@
 Module for lookup
 """
 
+
 def lookup(obj):
     """
     A Lookup for obj
