@@ -10,5 +10,5 @@ def save_to_json_file(my_obj, filename):
     Jsonnify into file
     """
     if len(filename) > 0:
-        with open(filename, 'wb') as file:
+        with open(filename, 'w') as file:
             return (json.dump(my_obj, file))
