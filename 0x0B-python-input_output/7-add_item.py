@@ -15,6 +15,8 @@ def main():
     Write a script that adds all arguments
     to a Python list, and then save them to a file
     """
+    with open(filename, 'w') as file:
+            pass
     my_obj = load_from_json_file("add_item.json")
     arg_list = [sys.argv[i] for i in range(1, len(sys.argv))]
     if not isinstance(my_obj, list):
