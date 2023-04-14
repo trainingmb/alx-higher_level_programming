@@ -9,4 +9,4 @@ def class_to_json(obj):
     """
     Jsonnify of Class
     """
-    return (json.dumps(my_obj.__dict__))
+    return (json.dumps(obj.__dict__))
