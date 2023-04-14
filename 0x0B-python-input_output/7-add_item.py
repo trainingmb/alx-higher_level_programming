@@ -22,7 +22,7 @@ def main():
     else:
         for i in arg_list:
             my_obj.append(i)
-        save_to_json_file(my_obj)
+        save_to_json_file(my_obj, "add_item.json")
 
 
 if __name__ == '__main__':
