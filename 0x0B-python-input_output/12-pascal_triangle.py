@@ -20,8 +20,8 @@ def pascal_triangle(n):
             if indx == 0:
                 curr_list.append(1)
             else:
-                curr_list.append(list_list[-1][indx]
-                    + list_list[-1][indx - 1])
+                s = list_list[-1][indx] + list_list[-1][indx - 1]
+                curr_list.append(s)
             if indx == (len(list_list[-1]) - 1):
                 curr_list.append(1)
                 break
