@@ -2,11 +2,10 @@
 """
 Jsonification of Class
 """
-import json
 
 
 def class_to_json(obj):
     """
-    Jsonnify of Class
+    Dict-jsonnify of Class
     """
-    return (json.dumps(obj.__dict__))
+    return (obj.__dict__)
