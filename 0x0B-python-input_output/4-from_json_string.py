@@ -9,5 +9,5 @@ def from_json_string(my_str):
     """
     Unjsonnify
     """
-    return (json.load(my_obj))
+    return (json.load(my_str))
 
