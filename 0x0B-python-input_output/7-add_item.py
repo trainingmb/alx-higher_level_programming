@@ -16,9 +16,11 @@ def main():
     to a Python list, and then save them to a file
     """
     filename = "add_item.json"
-    with open(filename, 'w') as file:
+    my_obj = []
+    try:
+        my_obj = load_from_json_file(filename)
+    except Exception as e:
         pass
-    my_obj = load_from_json_file(filename)
     arg_list = [sys.argv[i] for i in range(1, len(sys.argv))]
     if not isinstance(my_obj, list):
         save_to_json_file(arg_list)
