@@ -13,7 +13,7 @@ class Student:
     """
     def __init__(self, first_name, last_name, age):
         """
-        Instantiation with 
+        Instantiation with:
         first_name,
         last_name
         age
@@ -24,8 +24,10 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-        Retrieves a dictionary representation of a Student instance (same as 8-class_to_json.py):
-        If attrs is a list of strings, only attribute names contained in this list must be retrieved.
+        Retrieves a dictionary representation of a
+        Student instance (same as 8-class_to_json.py):
+        If attrs is a list of strings, only attribute
+        names contained in this list must be retrieved.
         Otherwise, all attributes must be retrieved
         """
         true_dict = (self.__dict__)
@@ -44,7 +46,8 @@ class Student:
         Replaces all attributes of the Student instance:
         You can assume json will always be a dictionary
         A dictionary key will be the public attribute name
-        A dictionary value will be the value of the public attribute
+        A dictionary value will be the value of the public
+        attribute
         """
         for key, value in json.items():
             if key == 'first_name':
