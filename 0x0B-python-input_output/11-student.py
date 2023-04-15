@@ -29,13 +29,13 @@ class Student:
         Otherwise, all attributes must be retrieved
         """
         true_dict = (self.__dict__)
-        if isinstance(attrs, list) and
-        all([isinstance(i, str) for i in attrs]):
-            false_dict = {}
-            for s in attrs:
-                if s in true_dict.keys():
-                    false_dict[s] = true_dict[s]
-            return (false_dict)
+        if isinstance(attrs, list):
+            if all([isinstance(i, str) for i in attrs]):
+                false_dict = {}
+                for s in attrs:
+                    if s in true_dict.keys():
+                        false_dict[s] = true_dict[s]
+                return (false_dict)
         else:
             return (true_dict)
 
