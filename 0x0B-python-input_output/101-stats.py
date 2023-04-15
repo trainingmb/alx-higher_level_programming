@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Documentation of module
+"""
 import sys
 
 
