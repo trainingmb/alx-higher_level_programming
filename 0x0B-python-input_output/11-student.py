@@ -7,6 +7,8 @@ Student class.
 class Student:
     """
     Student class
+    Converts to a dict json
+    Converts from a json dict
     """
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
