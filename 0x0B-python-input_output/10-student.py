@@ -15,7 +15,8 @@ class Student:
 
     def to_json(self, attrs=None):
         true_dict = (self.__dict__)
-        if isinstance(attrs, list) and all([isinstance(i, str) for i in attrs]):
+        if isinstance(attrs, list)
+        and all([isinstance(i, str) for i in attrs]):
             false_dict = {}
             for s in attrs:
                 if s in true_dict.keys():
