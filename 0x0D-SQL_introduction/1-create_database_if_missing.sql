@@ -1,8 +1,8 @@
---Creates the database hbtn_0c_0 in your MySQL server
---Create the database
+-- Creates the database hbtn_0c_0 in your MySQL server
+-- Create the database
 CREATE DATABASE
---Skip creation if database exists
+-- Skip creation if database exists
 IF NOT EXISTS
---Database name
+-- Database name
 hbtn_0c_0;
 
