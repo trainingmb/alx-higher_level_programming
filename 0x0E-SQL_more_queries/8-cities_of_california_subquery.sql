@@ -8,4 +8,4 @@ WHERE state_id =
   FROM states
   WHERE name = "California"
   LIMIT 1)
-ORDER_BY id;
+ORDER BY id;
