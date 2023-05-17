@@ -2,7 +2,7 @@
 -- Only One
 SELECT
   tv_shows.title,
-  SUM(tv_show_ratings.rate)
+  SUM(tv_show_ratings.rate) AS rating
 FROM
   tv_show_ratings
 LEFT JOIN
