@@ -1,7 +1,7 @@
 -- Lists all shows contained in hbtn_0d_tvshows that have at least one genre linked
 -- The Select
 SELECT
-	tv_genres.name as genre
+	tv_genres.name as name
 FROM
 tv_show_genres
 LEFT JOIN tv_genres ON
