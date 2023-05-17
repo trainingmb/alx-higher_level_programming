@@ -10,5 +10,5 @@ cities(
   id INT UNIQUE AUTO_INCREMENT NOT NULL PRIMARY KEY,
   state_id INT,
   name VARCHAR(256) NOT NULL,
-  FOREIGN KEY state_id REFERENCE states(id)
+  FOREIGN KEY state_id REFERENCES states(id)
 );
