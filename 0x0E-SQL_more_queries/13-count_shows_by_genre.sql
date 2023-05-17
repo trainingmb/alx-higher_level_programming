@@ -1,7 +1,7 @@
 -- Lists all shows contained in hbtn_0d_tvshows that have at least one genre linked
 -- The Select
 SELECT
-	tv_genres.name,
+	tv_genres.name as genre,
 	COUNT(tv_show_genres.genre_id) as number_of_shows
 FROM
 tv_show_genres
