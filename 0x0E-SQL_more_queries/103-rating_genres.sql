@@ -1,8 +1,8 @@
 -- Lists all genres in the database hbtn_0d_tvshows_rate by their rating.
 -- Only One Select
 SELECT
-  tv_genres.name as title,
-  SUM(tv_show_ratings.rate) as rating
+  tv_genres.name AS title,
+  SUM(tv_show_ratings.rate) AS rating
 FROM
   tv_show_genres
 LEFT JOIN
