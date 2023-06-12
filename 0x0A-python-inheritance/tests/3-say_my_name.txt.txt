@@ -1,0 +1,55 @@
+===========================
+How to Use 3_say_my_name.py
+===========================
+
+A function that prints My name is <first name> <last name>
+
+Usage
+=====
+
+Two names provided
+==================
+
+	"say_my_name(first_name, last_name="")" Standard usage is when two names are provided
+
+::
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("Alex", "Jonnes")
+	My name is Alex Jonnes
+	>>> say_my_name("", "Bond")
+	My name is  Bond
+	>>> say_my_name("James", "Bond")
+	My name is James Bond
+
+
+
+One Name Provided
+=================
+
+	When only one name is provided as the first name the funciton only prints that
+
+::
+
+	>>> say_my_name("Tonny")
+
+
+Exceptions
+==========
+
+	All names provided must be of type str otherwwise an error is raised
+
+::
+
+	>>> say_my_name(55, "Jonnes")
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: first_name must be a string
+	>>> say_my_name("Alex", 43)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: last_name must be a string
+	>>> say_my_name(('Tuple', ))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in ?
+	TypeError: first_name must be a string
