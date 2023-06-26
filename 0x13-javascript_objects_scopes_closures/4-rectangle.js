@@ -11,13 +11,15 @@ module.exports = class Rectangle {
   print () {
     console.log((('X'.repeat(this.width) + '\n').repeat(this.height)).slice(0, -1));
   }
-  double() {
+
+  double () {
     this.width *= 2;
     this.height *= 2;
   }
-  rotate() {
-    let temp = this.width;
-    this.width =  this.height;
+
+  rotate () {
+    const temp = this.width;
+    this.width = this.height;
     this.height = temp;
   }
 };
