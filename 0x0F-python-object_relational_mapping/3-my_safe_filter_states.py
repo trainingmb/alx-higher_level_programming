@@ -46,7 +46,10 @@ if __name__ == "__main__":
     script = "SELECT id, name "
     script = script + "FROM states "
     script = script + "WHERE name = '{}' ORDER BY id ASC;"
-    script = script.format(sys.argv[4])
+    j = sys.argv[4]
+    if ';' in j:
+        j = j.split(';')[0][:-1]
+    script = script.format(j)
     results = runsql(script, conn)
     displayresults(results)
     conn.close()
