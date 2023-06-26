@@ -8,4 +8,4 @@ for (let key in dict) {
     ndict[dict[key]].push(key);
   }
 }
-console.log(newDict);
+console.log(ndict);
