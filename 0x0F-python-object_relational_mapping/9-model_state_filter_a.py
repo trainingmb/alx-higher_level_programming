@@ -22,5 +22,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = createsessionmaker(engine)
     session = Session()
-    for id, name in session.query(State.id, State.name).filter(State.name.contains('a')).order_by(State.id):
+    results = session.query(State.id, State.name)
+    results = results.filter(State.name.contains('a'))
+    results = results.order_by(State.id)
+    for id, name in results:
         print("{}: {}".format(id, name))
