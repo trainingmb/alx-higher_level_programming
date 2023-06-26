@@ -47,5 +47,6 @@ if __name__ == "__main__":
         j = j.split(';')[0][:-1]
     script = script.format(j)
     results = runsql(script, conn)
+    print(results)
     print(", ".join([i[0] for i in results]))
     conn.close()
