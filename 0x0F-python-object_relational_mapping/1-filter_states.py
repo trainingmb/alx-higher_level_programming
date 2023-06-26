@@ -45,7 +45,7 @@ if __name__ == "__main__":
     conn = createconn(sys.argv[1], sys.argv[2], sys.argv[3])
     script = "SELECT id, name "
     script = script + "FROM states "
-    script = script + "WHERE name like 'N%' ORDER BY id ASC;"
+    script = script + "WHERE name LIKE BINARY 'N%' ORDER BY id ASC;"
     results = runsql(script, conn)
     displayresults(results)
     conn.close()
