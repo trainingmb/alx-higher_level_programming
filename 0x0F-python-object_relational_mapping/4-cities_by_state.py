@@ -44,9 +44,9 @@ def displayresults(results):
 if __name__ == "__main__":
     conn = createconn(sys.argv[1], sys.argv[2], sys.argv[3])
     script = """
-                SELECT cities.id, states.name, cities.name
+                SELECT cities.id, cities.name, states.name
                 FROM cities LEFT JOIN states ON
-                cities.sate_id = states.id
+                cities.state_id = states.id
                 ORDER BY cities.id ASC;
             """
     results = runsql(script, conn)
