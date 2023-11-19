@@ -18,7 +18,7 @@ class State(Base):
             nullable=False)
     name = Column(String(128), nullable=False)
     cities = relationship('City', backref='state',
-            passive_deletes=True)
+            cascade="all")
 
 class City(Base):
     """
