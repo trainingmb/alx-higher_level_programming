@@ -3,7 +3,8 @@
 List all states using SQLAlchemy
 """
 import sys
-from relationship_state import Base, State, City
+from relationship_city import Base, City
+from relationship_state import State
 
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
@@ -26,6 +27,8 @@ if __name__ == "__main__":
                 sys.argv[2], sys.argv[3])
     engine, Session = engine_session_creator(url)
     session  = Session()
-    new_city = City(name="San Francisco", state=State(name="California"))
+    new_city = City(name="San Francisco")
+    new_state = State(name="California", cities=[new_city])
+    session.add(new_state)
     session.add(new_city)
     session.commit()
