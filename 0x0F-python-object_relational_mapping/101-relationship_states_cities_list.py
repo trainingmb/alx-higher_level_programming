@@ -28,7 +28,8 @@ if __name__ == "__main__":
     session  = Session()
     res = session.query(City). \
         join(State). \
-        order_by(State.id, City.state_id). \
+        order_by(State.id). \
+        order_by(City.id). \
         all()
     if res != []:
         ts = res[0].state
