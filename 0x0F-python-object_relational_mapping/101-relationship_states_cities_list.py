@@ -26,17 +26,12 @@ if __name__ == "__main__":
                 sys.argv[2], sys.argv[3])
     engine, Session = engine_session_creator(url)
     session  = Session()
-    res = session.query(City). \
-        join(State). \
+    res = session.query(State). \
+        join(City). \
         order_by(State.id). \
         order_by(City.id). \
         all()
-    if res != []:
-        ts = res[0].state
-        print("{}: {}".format(ts.id, ts.name))
-        for i in res:
-            if ts != i.state:
-                ts = i.state
-                print("{}: {}".format(ts.id, ts.name))
-            print("\t{}: {}".format(i.id, i.name))
-
+    for i in res:
+        print("{}: {}".format(i.id, i.name))
+        for j in i.cities:
+            print("\t{}: {}".format(j.id, j.name))
