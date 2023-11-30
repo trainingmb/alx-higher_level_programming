@@ -22,6 +22,6 @@ Please test your script in the sandbox provided, using the web server running on
 **Repo:**
 
 
-*   GitHub repository: `alx-higher_level_programming`
-*   Directory: `0x10-python-network_0`
-*   File: `0-body_size.sh`
+*   GitHub repository: [`alx-higher_level_programming`](../)
+*   Directory: [`0x10-python-network_0`](.)
+*   File: [`0-body_size.sh`](/0-body_size.sh)
