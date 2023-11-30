@@ -30,12 +30,11 @@ guillaume@ubuntu:~/0x10$
 **Repo:** 
 
 * GitHub repository:
- [[[alx-higher_level_programming](../)](../)](../)
+ [alx-higher_level_programming](../)
 * Directory:
- [[[0x10-python-network_0](.)](.)](.)
+  [0x10-python-network_0](.)
 * File:
- [[0-body_size.sh](../)](/[0-body_size.sh](../))
-
+  [0-body_size.sh](../)
 
 ### 
  1. cURL to the end
