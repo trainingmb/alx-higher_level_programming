@@ -26,7 +26,7 @@ def printCommits(ujsn, limit=10):
 if __name__ == "__main__":
     from sys import argv, exit
     import requests
-    url = "https://api.github.com/repos/{}/{}/commits".format(argv[1], argv[2])
+    url = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
     header = {'Accept': 'application/vnd.github+json',
               'X-GitHub-Api-Version': '2022-11-28'}
     data = {'per_page': 10}
