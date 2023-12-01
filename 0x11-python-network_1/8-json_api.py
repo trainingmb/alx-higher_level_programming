@@ -12,8 +12,8 @@ if __name__ == "__main__":
     if len(argv) > 1:
         value = str(argv[1])
     response = requests.post(url, data={'q': value})
-    jsn = response.json()
-    if jsn:
+    if response.headers.get('content-type') == 'application/json':
+        jsn = response.json()
         if jsn.get('id') is None:
             print("No result")
         else:
