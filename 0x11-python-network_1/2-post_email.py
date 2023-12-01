@@ -15,4 +15,4 @@ if __name__ == "__main__":
     data = urlencode(values).encode('ascii')
     req = Request(url, data)
     with urlopen(req) as response:
-        print(response.read())
+        print(response.read().decode("utf-8"))
