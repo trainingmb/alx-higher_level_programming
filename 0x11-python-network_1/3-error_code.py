@@ -13,7 +13,7 @@ if __name__ == "__main__":
     from urllib.parse import urlencode
     from urllib.error import HTTPError
     try:
-        with urlopen(req) as response:
+        with urlopen(url) as response:
             print(response.read().decode("utf-8"))
     except HTTPError as e:
         print('Error code: ', e.code)
