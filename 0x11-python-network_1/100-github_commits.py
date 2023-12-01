@@ -4,18 +4,22 @@ Interview Question Github API
 """
 
 
-def printCommits(jsn, limit=10):
+def printCommits(ujsn, limit=10):
     """
     Print <limit> commit message sha and commiter
     name
     """
+    jsn = sorted(ujsn,
+                key=lambda name: name.get('commit').get('author').get('date'),
+                reverse=True)
     i = 0
     if len(jsn) < limit:
         limit = len(jsn)
     while i < limit:
         sha = jsn[i].get('sha')
+        date = jsn[i].get('commit').get('author').get('date')
         name = jsn[i].get('commit').get('author').get('name')
-        print("{}: {}".format(sha, name))
+        print("{}<{}>: {}".format(sha, date, name))
         i += 1
 
 
