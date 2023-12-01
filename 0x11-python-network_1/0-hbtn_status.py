@@ -10,7 +10,7 @@ if __name__ == "__main__":
     from urllib.request import urlopen
     with urlopen(url) as response:
         the_page = response.read()
-        print("Body Response:")
+        print("Body response:")
         print("\t- type: {}".format(type(the_page)))
         print("\t- content: {}".format(the_page))
         print("\t- utf8 content: {}".format(the_page.decode('utf8')))
