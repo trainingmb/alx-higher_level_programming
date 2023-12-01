@@ -43,7 +43,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [0-hbtn_status.py](/0-hbtn_status.py)
+ [0-hbtn_status.py](./0-hbtn_status.py)
 
 
 ### 
@@ -94,7 +94,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [1-hbtn_header.py](/1-hbtn_header.py)
+ [1-hbtn_header.py](./1-hbtn_header.py)
 
 
 ### 
@@ -149,7 +149,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [2-post_email.py](/2-post_email.py)
+ [2-post_email.py](./2-post_email.py)
 
 
 ### 
@@ -210,7 +210,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [3-error_code.py](/3-error_code.py)
+ [3-error_code.py](./3-error_code.py)
 
 
 ### 
@@ -253,7 +253,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [4-hbtn_status.py](/4-hbtn_status.py)
+ [4-hbtn_status.py](./4-hbtn_status.py)
 
 
 ### 
@@ -301,7 +301,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [5-hbtn_header.py](/5-hbtn_header.py)
+ [5-hbtn_header.py](./5-hbtn_header.py)
 
 
 ### 
@@ -350,7 +350,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [6-post_email.py](/6-post_email.py)
+ [6-post_email.py](./6-post_email.py)
 
 
 ### 
@@ -404,7 +404,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [7-error_code.py](/7-error_code.py)
+ [7-error_code.py](./7-error_code.py)
 
 
 ### 
@@ -475,7 +475,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [8-json_api.py](/8-json_api.py)
+ [8-json_api.py](./8-json_api.py)
 
 
 ### 
@@ -536,7 +536,7 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [10-my_github.py](/10-my_github.py)
+ [10-my_github.py](./10-my_github.py)
 
 
 ### 
@@ -609,6 +609,6 @@ guillaume@ubuntu:~/0x11$
 * Directory:
  [0x11-python-network_1](.)
 * File:
- [100-github_commits.py](/100-github_commits.py)
+ [100-github_commits.py](./100-github_commits.py)
 
 
