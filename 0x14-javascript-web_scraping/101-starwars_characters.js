@@ -7,8 +7,8 @@ const request = require('request');
 // Variables
 const args = process.argv;
 const hit = {};
-var counterstop = 0;
-var counterx = 0;
+let counterstop = 0;
+let counterx = 0;
 
 // Iterate through info
 function allInfo (info) {
@@ -28,7 +28,7 @@ function getPeople (purl) {
   });
 }
 
-//Counter for when to log
+// Counter for when to log
 function counter () {
   counterx++;
   if (counterx === counterstop) {
