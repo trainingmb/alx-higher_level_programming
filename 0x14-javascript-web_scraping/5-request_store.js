@@ -12,7 +12,7 @@ const args = process.argv;
 if (args[3] != null) {
   request(args[2], function (err, response, body) {
     if (!err && response.statusCode === 200) {
-      fs.writeFile(args[3], body, error => {
+      fs.writeFile(args[3], body, 'utf8', error => {
         if (error) {
           console.error(error);
         }
