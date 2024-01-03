@@ -10,7 +10,7 @@ const args = process.argv;
 
 //Argument provided
 if (args[2] != null){
-	fs.readFile(args[2], (err, data) => {
+	fs.readFile(args[2], {encoding: 'utf-8'}, function(err, data) => {
 		if (err) {
 			console.error(err);
 			return;
