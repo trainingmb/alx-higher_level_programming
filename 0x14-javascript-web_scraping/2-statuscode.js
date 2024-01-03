@@ -9,9 +9,9 @@ const args = process.argv;
 
 // Argument provided
 if (args[2] != null) {
-  request(args[2], function(err, response, body) {
+  request(args[2], function (err, response, body) {
     if (!err) {
-      console.log("code:", response && response.statusCode);
+      console.log('code:', response && response.statusCode);
     }
   });
 }
