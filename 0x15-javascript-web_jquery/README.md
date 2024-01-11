@@ -1,75 +1,47 @@
 ## 0x15. JavaScript - Web jQuery
 
 ### 
- 0. Readme
+ 0. No JQuery
  
 
 
 
 
 
- Write a script that reads and prints the content of a file.
+ Write a JavaScript script that updates the text color of the
+ `<header>` 
+ element to red (
+ `#FF0000` 
+ ):
  
-* The first argument is the file path
-* The content of the file must be read in
- `utf-8`
-* If an error occurred during the reading, print the error object
+* You must use
+ `document.querySelector` 
+ to select the HTML tag
+* You can’t use the JQuery API
 
 
+
+ Please test with this HTML file in your browser:
+ 
 
 ```
-guillaume@ubuntu:~/0x14$ cat cisfun
-C is super fun!
-guillaume@ubuntu:~/0x14$ ./0-readme.js cisfun
-C is super fun!
-
-guillaume@ubuntu:~/0x14$ ./0-readme.js doesntexist
-{ Error: ENOENT: no such file or directory, open 'doesntexist'
-    at Error (native)
-  errno: -2,
-  code: 'ENOENT',
-  syscall: 'open',
-  path: 'doesntexist' }
-guillaume@ubuntu:~/0x14$ 
-
-```
-
-
-
-
-**Repo:** 
-
-* GitHub repository:
- [alx-higher_level_programming](../)
-* Directory:
- [0x14-javascript-web_scraping](.)
-* File:
- [0-readme.js](./0-readme.js)
-
-
-### 
- 1. Write me
- 
-
-
-
-
-
- Write a script that writes a string to a file.
- 
-* The first argument is the file path
-* The second argument is the string to write
-* The content of the file must be written in
- `utf-8`
-* If an error occurred during while writing, print the error object
-
-
-
-```
-guillaume@ubuntu:~/0x14$ ./1-writeme.js my_file.txt "Python is cool"
-guillaume@ubuntu:~/0x14$ cat my_file.txt ; echo ""
-Python is cool
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 0-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="0-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -81,39 +53,54 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [1-writeme.js](./1-writeme.js)
+ [0-script.js](./0-script.js)
 
 
 ### 
- 2. Status code
+ 1. With JQuery
  
 
 
 
 
 
- Write a script that display the status code of a
- `GET` 
- request.
+ Write a JavaScript script that updates the text color of the
+ `<header>` 
+ element to red (
+ `#FF0000` 
+ ):
  
-* The first argument is the URL to request (
- `GET` 
- )
-* The status code must be printed like this:
- `code: <status code>`
-* You must use the module
- `request`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
 
 
+
+ Please test with this HTML file in your browser:
+ 
 
 ```
-guillaume@ubuntu:~/0x14$ ./2-statuscode.js https://alx-intranet.hbtn.io/status
-code: 200
-guillaume@ubuntu:~/0x14$ ./2-statuscode.js https://alx-intranet.hbtn.io/doesnt_exist
-code: 404
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 1-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="1-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -125,81 +112,57 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [2-statuscode.js](./2-statuscode.js)
+ [1-script.js](./1-script.js)
 
 
 ### 
- 3. Star wars movie title
+ 2. Click and turn red
  
 
 
 
 
 
- Write a script that prints the title of a Star Wars movie where the episode number matches a given integer.
- 
-* The first argument is the movie ID
-* You must use the
- [Star wars API](/rltoken/HwLU2L7tJ4TEjzfTBc7zTA "Star wars API") 
- with the endpoint
- `https://swapi-api.alx-tools.com/api/films/:id`
-* You must use the module
- `request`
-
-
-
-```
-guillaume@ubuntu:~/0x14$ ./3-starwars_title.js 1
-A New Hope
-guillaume@ubuntu:~/0x14$ ./3-starwars_title.js 5
-Attack of the Clones
-guillaume@ubuntu:~/0x14$ 
-
-```
-
-
-
-
-**Repo:** 
-
-* GitHub repository:
- [alx-higher_level_programming](../)
-* Directory:
- [0x14-javascript-web_scraping](.)
-* File:
- [3-starwars_title.js](./3-starwars_title.js)
-
-
-### 
- 4. Star wars Wedge Antilles
- 
-
-
-
-
-
- Write a script that prints the number of movies where the character “Wedge Antilles” is present.
- 
-* The first argument is the API URL of the
- [Star wars API](/rltoken/HwLU2L7tJ4TEjzfTBc7zTA "Star wars API") 
+ Write a JavaScript script that updates the text color of the
+ `<header>` 
+ element to red (
+ `#FF0000` 
+ ) when the user clicks on the tag
+ `DIV#red_header` 
  :
- `https://swapi-api.alx-tools.com/api/films/`
-* Wedge Antilles is character ID
- `18` 
- - your script
- **must** 
- use this ID for filtering the result of the API
-* You must use the module
- `request`
+ 
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
 
 
+
+ Please test with this HTML file in your browser:
+ 
 
 ```
-guillaume@ubuntu:~/0x14$ ./4-starwars_count.js https://swapi-api.alx-tools.com/api/films
-3
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 2-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <div id="red_header">Red header</div>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="2-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -211,41 +174,61 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [4-starwars_count.js](./4-starwars_count.js)
+ [2-script.js](./2-script.js)
 
 
 ### 
- 5. Loripsum
+ 3. Add `.red` class
  
 
 
 
 
 
- Write a script that gets the contents of a webpage and stores it in a file.
+ Write a JavaScript script that adds the class
+ `red` 
+ to the
+ `<header>` 
+ element when the user clicks on the tag
+ `DIV#red_header` 
+
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+
+
+
+ Please test with this HTML file in your browser:
  
-* The first argument is the URL to request
-* The second argument the file path to store the body response
-* The file must be UTF-8 encoded
-* You must use the module
- `request`
-
-
 
 ```
-guillaume@ubuntu:~/0x14$ ./5-request_store.js http://loripsum.net/api loripsum
-guillaume@ubuntu:~/0x14$ cat loripsum
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec quo modo conveniant, non sane intellego. Nam memini etiam quae nolo, oblivisci non possum quae volo. Te enim iudicem aequum puto, modo quae dicat ille bene noris. Terram, mihi crede, ea lanx et maria deprimet. Deinde prima illa, quae in congressu solemus: Quid tu, inquit, huc? Hoc etsi multimodis reprehendi potest, tamen accipio, quod dant. </p>
-
-<p>Ad eos igitur converte te, quaeso. Pudebit te, inquam, illius tabulae, quam Cleanthes sane commode verbis depingere solebat. Sic enim censent, oportunitatis esse beate vivere. Quo studio Aristophanem putamus aetatem in litteris duxisse? Aeque enim contingit omnibus fidibus, ut incontentae sint. Ut aliquid scire se gaudeant? Qui enim existimabit posse se miserum esse beatus non erit. Putabam equidem satis, inquit, me dixisse. </p>
-
-<p>Duo Reges: constructio interrete. Quid ei reliquisti, nisi te, quoquo modo loqueretur, intellegere, quid diceret? Quis animo aequo videt eum, quem inpure ac flagitiose putet vivere? Illud non continuo, ut aeque incontentae. Illa videamus, quae a te de amicitia dicta sunt. At ille pellit, qui permulcet sensum voluptate. Tamen aberramus a proposito, et, ne longius, prorsus, inquam, Piso, si ista mala sunt, placet. </p>
-
-<p>Non enim, si omnia non sequebatur, idcirco non erat ortus illinc. Nos cum te, M. Quem si tenueris, non modo meum Ciceronem, sed etiam me ipsum abducas licebit. Apparet statim, quae sint officia, quae actiones. Ergo instituto veterum, quo etiam Stoici utuntur, hinc capiamus exordium. Eadem nunc mea adversum te oratio est. Quid, si etiam iucunda memoria est praeteritorum malorum? Hoc enim constituto in philosophia constituta sunt omnia. </p>
-
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 3-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      .red {
+        color: #FF0000;
+      }
+    </style>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <div id="red_header">Red header</div>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="3-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -257,42 +240,77 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [5-request_store.js](./5-request_store.js)
+ [3-script.js](./3-script.js)
 
 
 ### 
- 6. How many completed?
+ 4. Toggle classes
  
 
 
 
 
 
- Write a script that computes the number of tasks completed by user id.
+ Write a JavaScript script that toggles the class of the
+ `<header>` 
+ element when the user clicks on the tag
+ `DIV#toggle_header` 
+ :
  
-* The first argument is the API URL:
- `https://jsonplaceholder.typicode.com/todos`
-* Only print users with completed task
-* You must use the module
- `request`
+* The
+ `<header>` 
+ element must always have one class:
+ `red` 
+ or
+ `green` 
+ , never both in the same time and never empty.
+* If the current class is
+ `red` 
+ , when the user click on
+ `DIV#toggle_header` 
+ , the class must be updated to
+ `green` 
+ ; and the reverse.
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
 
 
+
+ Please test with this HTML file in your browser:
+ 
 
 ```
-guillaume@ubuntu:~/0x14$ ./6-completed_tasks.js https://jsonplaceholder.typicode.com/todos
-{ '1': 11,
-  '2': 8,
-  '3': 7,
-  '4': 6,
-  '5': 12,
-  '6': 6,
-  '7': 9,
-  '8': 11,
-  '9': 8,
-  '10': 12 }
-guillaume@ubuntu:~/0x14$
+guillaume@ubuntu:~/0x15$ cat 4-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+      .red {
+        color: #FF0000;
+      }
+      .green {
+        color: #00FF00;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="green"> 
+      First HTML page
+    </header>
+    <div id="toggle_header">Toggle header</div>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="4-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -304,55 +322,64 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [6-completed_tasks.js](./6-completed_tasks.js)
+ [4-script.js](./4-script.js)
 
 
 ### 
- 7. Who was playing in this movie?
+ 5. List of elements
  
 
 
 
 
 
- Write a script that prints all characters of a Star Wars movie:
+ Write a JavaScript script that adds a
+ `<li>` 
+ element to a list when the user clicks on the tag
+ `DIV#add_item` 
+ :
  
-* The first argument is the Movie ID - example:
- `3` 
- = “Return of the Jedi”
-* Display one character name by line
-* You must use the
- [Star wars API](/rltoken/HwLU2L7tJ4TEjzfTBc7zTA "Star wars API")
-* You must use the module
- `request`
+* The new element must be:
+ `<li>Item</li>`
+* The new element must be added to
+ `UL.my_list`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
 
 
+
+ Please test with this HTML file in your browser:
+ 
 
 ```
-guillaume@ubuntu:~/0x14$ ./100-starwars_characters.js 3
-Darth Vader
-R2-D2
-Luke Skywalker
-Han Solo
-Leia Organa
-Chewbacca
-Palpatine
-Obi-Wan Kenobi
-Jabba Desilijic Tiure
-Wedge Antilles
-Yoda
-Boba Fett
-Ackbar
-Arvel Crynyd
-Mon Mothma
-Nien Nunb
-Wicket Systri Warrick
-Bib Fortuna
-C-3PO
-Lando Calrissian
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 5-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <br />
+    <div id="add_item">Add item</div>
+    <br />
+    <ul class="my_list">
+      <li>Item</li>
+    </ul>
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="5-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -364,58 +391,58 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [100-starwars_characters.js](./100-starwars_characters.js)
+ [5-script.js](./5-script.js)
 
 
 ### 
- 8. Right order
+ 6. Change the text
  
 
 
 
 
 
- Write a script that prints all characters of a Star Wars movie:
+ Write a JavaScript script that updates the text of the
+ `<header>` 
+ element to
+ `New Header!!!` 
+ when the user clicks on
+ `DIV#update_header` 
+
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+
+
+
+ Please test with this HTML file in your browser:
  
-* The first argument is the Movie ID - example:
- `3` 
- = “Return of the Jedi”
-* Display one character name by line
- **in the same order of the list “characters” in the
- `/films/` 
- response**
-* You must use the
- [Star wars API](/rltoken/HwLU2L7tJ4TEjzfTBc7zTA "Star wars API")
-* You must use the module
- `request`
-
-
 
 ```
-guillaume@ubuntu:~/0x14$ ./101-starwars_characters.js 3
-Luke Skywalker
-C-3PO
-R2-D2
-Darth Vader
-Leia Organa
-Obi-Wan Kenobi
-Chewbacca
-Han Solo
-Jabba Desilijic Tiure
-Wedge Antilles
-Yoda
-Palpatine
-Boba Fett
-Lando Calrissian
-Ackbar
-Mon Mothma
-Arvel Crynyd
-Wicket Systri Warrick
-Nien Nunb
-Bib Fortuna
-guillaume@ubuntu:~/0x14$ 
+guillaume@ubuntu:~/0x15$ cat 6-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <br />
+    <div id="update_header">Update the header</div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="6-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
 
 ```
 
@@ -427,9 +454,510 @@ guillaume@ubuntu:~/0x14$
 * GitHub repository:
  [alx-higher_level_programming](../)
 * Directory:
- [0x14-javascript-web_scraping](.)
+ [0x15-javascript-web_jquery](.)
 * File:
- [101-starwars_characters.js](./101-starwars_characters.js)
+ [6-script.js](./6-script.js)
+
+
+### 
+ 7. Star wars character
+ 
+
+
+
+
+
+ Write a JavaScript script that fetches the character
+ `name` 
+ from this URL:
+ `https://swapi-api.alx-tools.com/api/people/5/?format=json` 
+
+* The name must be displayed in the HTML tag
+ `DIV#character`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 7-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      Star Wars character
+    </header>
+    <br />
+    <div id="character"></div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="7-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [7-script.js](./7-script.js)
+
+
+### 
+ 8. Star Wars movies
+ 
+
+
+
+
+
+ Write a JavaScript script that fetches and lists the
+ `title` 
+ for all movies by using this URL:
+ `https://swapi-api.alx-tools.com/api/films/?format=json` 
+
+* All movie titles must be list in the HTML tag
+ `UL#list_movies`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 8-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <header> 
+      Star Wars movies
+    </header>
+    <br />
+    <ul id="list_movies">
+    </ul>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+    <script type="text/javascript" src="8-script.js"></script>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [8-script.js](./8-script.js)
+
+
+### 
+ 9. Say Hello!
+ 
+
+
+
+
+
+ Write a JavaScript script that fetches from
+ `https://hellosalut.stefanbohacek.dev/?lang=fr` 
+ and displays the value of
+ `hello` 
+ from that fetch in the HTML tag
+ `DIV#hello` 
+ .
+ 
+* The translation of “hello” must be displayed in the HTML tag
+ `DIV#hello`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+* Your script must work when it is imported from the
+ `<head>` 
+ tag
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 9-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="9-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      Say Hello!
+    </header>
+    <br />
+    <div id="hello"></div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [9-script.js](./9-script.js)
+
+
+### 
+ 10. No jQuery - document loaded
+ 
+
+
+
+
+
+ Write a JavaScript script that updates the text color of the
+ `<header>` 
+ element to red (
+ `#FF0000` 
+ ):
+ 
+* You must use
+ `document.querySelector` 
+ to select the HTML tag
+* You can’t use the jQuery API
+* Note: Your script must be imported from the
+ `<head>` 
+ tag, not at the end of the HTML
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 100-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script type="text/javascript" src="100-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [100-script.js](./100-script.js)
+
+
+### 
+ 11. List, add, remove
+ 
+
+
+
+
+
+ Write a JavaScript script that adds, removes and clears
+ `LI` 
+ elements from a list when the user clicks:
+ 
+* The new element must be:
+ `<li>Item</li>`
+* The new element must be added to
+ `UL.my_list`
+* When the user clicks on
+ `DIV#add_item` 
+ : a new element is added to the list
+* When the user clicks on
+ `DIV#remove_item` 
+ : the last element is removed from the list
+* When the user clicks on
+ `DIV#clear_list` 
+ : all elements of the list are removed
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+* You script must work when it imported from the
+ `HEAD` 
+ tag
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 101-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="101-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <br />
+    <div id="add_item">Add item</div>
+    <div id="remove_item">Remove item</div>
+    <div id="clear_list">Clear list</div>
+    <br />
+    <ul class="my_list">
+      <li>Item</li>
+    </ul>
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [101-script.js](./101-script.js)
+
+
+### 
+ 12. Say hello to everybody!
+ 
+
+
+
+
+
+ Write a JavaScript script that fetches and prints how to say “Hello” depending on the language
+ 
+* You should use this API service:
+ `https://www.fourtonfish.com/hellosalut/hello/`
+* The language code will be the value entered in the tag
+ `INPUT#language_code` 
+ (ex:
+ `es` 
+ ,
+ `fr` 
+ ,
+ `en` 
+ etc.)
+* The translation must be fetched when the user clicks on
+ `INPUT#btn_translate`
+* The translation of “Hello” must be displayed in the HTML tag
+ `DIV#hello`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+* You script must work when imported from the
+ `<head>` 
+ tag
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 102-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="102-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      Say Hello
+    </header>
+    <br />
+    <input id="language_code" type="text" placeholder="Language code"/>
+    <input id="btn_translate" type="button" value="Translate"/>
+    <br />
+    <div id="hello"></div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [102-script.js](./102-script.js)
+
+
+### 
+ 13. And press ENTER
+ 
+
+
+
+
+
+ Write a JavaScript script that fetches and prints how to say “Hello” depending on the language
+ 
+* You should use this API service:
+ `https://www.fourtonfish.com/hellosalut/hello/`
+* The language code will be the value entered in the tag
+ `INPUT#language_code` 
+ (ex:
+ `es` 
+ ,
+ `fr` 
+ ,
+ `en` 
+ etc.)
+* The translation must be fetched when the user clicks on
+ `INPUT#btn_translate` 
+ OR presses
+ `ENTER` 
+ when the focus is on
+ `INPUT#language_code`
+* The translation of “Hello” must be displayed in the HTML tag
+ `DIV#hello`
+* You can’t use
+ `document.querySelector` 
+ to select the HTML tag
+* You must use the JQuery API
+* You script must work when imported from the
+ `<head>` 
+ tag
+
+
+
+ Please test with this HTML file in your browser:
+ 
+
+```
+guillaume@ubuntu:~/0x15$ cat 103-main.html 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Holberton School</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="103-script.js"></script>
+  </head>
+  <body>
+    <header> 
+      Say Hello
+    </header>
+    <br />
+    <input id="language_code" type="text" placeholder="Language code"/>
+    <input id="btn_translate" type="button" value="Translate"/>
+    <br />
+    <div id="hello"></div>
+    <br />
+    <footer>
+      Holberton School - 2017
+    </footer>
+  </body>
+</html>
+guillaume@ubuntu:~/0x15$ 
+
+```
+
+
+
+
+**Repo:** 
+
+* GitHub repository:
+ [alx-higher_level_programming](../)
+* Directory:
+ [0x15-javascript-web_jquery](.)
+* File:
+ [103-script.js](./103-script.js)
+
 
 
 
